@@ -1,11 +1,11 @@
-const asyncHandelar = () => {
-    (req,res,next) => {
-        Promise.resolve(asyncHandelar(req,res,next)).catch((err)=> next(err))
+const asyncHandalar = (requsetHandelar) => {
+   return (req,res,next) => {
+        Promise.resolve(requsetHandelar(req,res,next)).catch((err)=> next(err))
     }
 }
 
 
-export {asyncHandelar}
+export {asyncHandalar}
 
 
 // const asyncHandelar = () => () =>{}
